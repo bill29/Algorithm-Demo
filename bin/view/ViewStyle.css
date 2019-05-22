@@ -1,0 +1,10 @@
+
+
+.button-hbox:pressed {
+	-fx-background-color : #559670;
+	-fx-border-color: transparent;
+}
+
+.button-hbox {
+	-fx-background-color : transparent;
+}

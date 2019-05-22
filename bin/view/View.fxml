@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@ViewStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewController">
+   <center>
+      <AnchorPane fx:id="viewer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#handle" onMouseDragged="#handle" onMousePressed="#handle" onMouseReleased="#handle" prefHeight="680.0" prefWidth="1000.0" style="-fx-background-color: # EAEBE7;" BorderPane.alignment="CENTER">
+         <children>
+            <Group fx:id="canvasGroup">
+               <children>
+                  <Pane fx:id="viewer" prefHeight="100.0" prefWidth="300.0" />
+               </children>
+            </Group>
+         </children></AnchorPane>
+   </center>
+   <bottom>
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="120.0" prefWidth="1000.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="31.0" prefWidth="628.0" HBox.hgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXButton fx:id="clearButton" alignment="CENTER" buttonType="RAISED" maxHeight="1.7976931348623157E308" onAction="#clearHandle" prefHeight="31.0" prefWidth="120.0" ripplerFill="BLACK" style="-fx-background-color: #4dd2ff; -fx-background-radius: 100px;" text="Clear" textFill="WHITE" textOverrun="CLIP" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="resetButton" buttonType="RAISED" maxHeight="1.7976931348623157E308" onAction="#resetHandle" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #ff5722; -fx-background-radius: 100px;" text="Reset" textFill="WHITE" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXSlider fx:id="slider" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="142.0" GridPane.columnIndex="12" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#backHandle" prefHeight="43.0" prefWidth="134.0" styleClass="button-hbox" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowSpan="4" GridPane.valignment="TOP">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/openHidden.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="playPauseButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#playPauseHandle" styleClass="button-hbox" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowSpan="4" GridPane.valignment="TOP">
+                     <graphic>
+                        <ImageView fx:id="playPauseImg" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/play_arrow_black_48x48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Start" />
+                     </tooltip>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#forwardHandle" styleClass="button-hbox" GridPane.columnIndex="9" GridPane.columnSpan="2" GridPane.rowSpan="4" GridPane.valignment="TOP">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/openHidden%20-%20Copy.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets left="260.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <left>
+      <VBox prefWidth="260.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane VBox.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="53.0" prefWidth="273.0" text="Algorithms" GridPane.columnSpan="4" GridPane.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #838383; -fx-border-width: 3px0px0px0px;" GridPane.columnSpan="4" GridPane.rowIndex="1">
+                     <children>
+                        <JFXToggleButton fx:id="dijkstraButton" onAction="#dijkstraHandle" text="Dijkstra">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="2">
+                     <children>
+                        <JFXToggleButton fx:id="dfsButton" onAction="#dfsHandle" text="DFS">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #838383; -fx-border-width: 0px0px3px0px;" GridPane.columnSpan="4" GridPane.rowIndex="3">
+                     <children>
+                        <JFXToggleButton fx:id="bfsButton" onAction="#bfsHandle" text="BFS">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="85.0" prefWidth="234.0" spacing="20.0" GridPane.columnSpan="4" GridPane.rowIndex="7">
+                     <children>
+                        <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#clickAbout" prefHeight="55.0" prefWidth="110.0" style="-fx-background-color: #4dd2ff; -fx-background-radius: 100px;" text="About" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="WEIXIN" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#clickHelp" prefHeight="55.0" prefWidth="110.0" style="-fx-background-color: #4dd2ff; -fx-background-radius: 100px;" text="Help" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="WRENCH" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="6">
+                     <children>
+                        <JFXButton buttonType="RAISED" onAction="#backHome" prefHeight="55.0" prefWidth="144.0" style="-fx-background-color: #ff5722;" text="Home" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="HOME" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="4">
+                     <children>
+                        <JFXToggleButton fx:id="addVertexButton" onAction="#addVertexHandle" text="Add Node">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #838383; -fx-border-width: 0px0px3px0px;" GridPane.columnSpan="4" GridPane.rowIndex="5">
+                     <children>
+                        <JFXToggleButton fx:id="addEdgeButton" onAction="#addEdgeHandle" text="Add Edge">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
