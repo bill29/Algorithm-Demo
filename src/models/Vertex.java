@@ -5,24 +5,34 @@ import java.util.List;
 
 public class Vertex implements Comparable<Vertex>{
 
-    public String name;
+    private int id;
     public List<Edge> adjacents = new ArrayList<>();
     public Vertex previous;
-    public VertexCircle circle;
+    private VertexCircle circle;
     public double minDistance = Double.POSITIVE_INFINITY;
     public boolean visited;
+    public boolean isSelected = false;
+    
+    public int getId() {
+		return id;
+	}
 
-    public Vertex() {
 
-    }
+	public VertexCircle getCircle() {
+		return circle;
+	}
 
-    public Vertex(String name) {
-        this.name = name;
-        this.visited = false;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public Vertex(String name, VertexCircle c) {
-        this.name = name;
+
+	public void setCircle(VertexCircle circle) {
+		this.circle = circle;
+	}
+
+    public Vertex(int id, VertexCircle c) {
+        this.id = id;
         this.circle = c;
         this.visited = false;
     }

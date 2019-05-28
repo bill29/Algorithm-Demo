@@ -14,7 +14,7 @@ public class Main extends Application {
 	public void start(Stage Stage) throws Exception{
 		try {
 			primaryStage = Stage;
-			Parent root = FXMLLoader.load(getClass().getResource("/view/GiaoDien.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/view/HomePage.fxml"));
 			primaryStage.setTitle("Graph_Algorithms");
 			primaryStage.setScene(new Scene(root));
 			primaryStage.show();

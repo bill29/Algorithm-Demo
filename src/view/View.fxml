@@ -21,21 +21,21 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@ViewStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1260.0" stylesheets="@ViewStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewController">
    <center>
       <AnchorPane fx:id="viewer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#handle" onMouseDragged="#handle" onMousePressed="#handle" onMouseReleased="#handle" prefHeight="680.0" prefWidth="1000.0" style="-fx-background-color: # EAEBE7;" BorderPane.alignment="CENTER">
          <children>
             <Group fx:id="canvasGroup">
                <children>
-                  <Pane fx:id="viewer" prefHeight="100.0" prefWidth="300.0" />
+                  <Pane fx:id="viewer" prefHeight="561.0" prefWidth="993.0" />
                </children>
             </Group>
          </children></AnchorPane>
    </center>
    <bottom>
-      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="120.0" prefWidth="1000.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="120.0" prefWidth="1260.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
          <children>
-            <GridPane prefHeight="31.0" prefWidth="628.0" HBox.hgrow="ALWAYS">
+            <GridPane prefHeight="120.0" prefWidth="985.0" HBox.hgrow="ALWAYS">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -165,7 +165,7 @@
                         </JFXToggleButton>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="85.0" prefWidth="234.0" spacing="20.0" GridPane.columnSpan="4" GridPane.rowIndex="7">
+                  <HBox alignment="CENTER" prefHeight="85.0" prefWidth="234.0" spacing="20.0" GridPane.columnSpan="4" GridPane.rowIndex="6">
                      <children>
                         <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#clickAbout" prefHeight="55.0" prefWidth="110.0" style="-fx-background-color: #4dd2ff; -fx-background-radius: 100px;" text="About" textFill="WHITE">
                            <graphic>
@@ -185,7 +185,7 @@
                         </JFXButton>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="6">
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="7">
                      <children>
                         <JFXButton buttonType="RAISED" onAction="#backHome" prefHeight="55.0" prefWidth="144.0" style="-fx-background-color: #ff5722;" text="Home" textFill="WHITE">
                            <graphic>
